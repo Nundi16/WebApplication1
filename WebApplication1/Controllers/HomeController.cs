@@ -10,7 +10,12 @@ namespace WebApplication1.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Hello World!");
+            Models.Movies movie = new Models.Movies()
+            {
+                Title = "The Godfather",
+                ReleaseDate = new DateTime(1972, 3, 24)
+            };
+            return View(movie);
         }
     }
 }
